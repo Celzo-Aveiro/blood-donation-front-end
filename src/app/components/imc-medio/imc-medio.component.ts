@@ -7,8 +7,7 @@ import { CandidatoService } from '../../services/candidato.service';
   styleUrls: ['./imc-medio.component.css']
 })
 export class ImcMedioComponent implements OnInit {
-[x: string]: any;
-  imcMedio: any;
+  imcMedio: Map<number, number> = new Map<number, number>();
 
   constructor(private candidatoService: CandidatoService) { }
 

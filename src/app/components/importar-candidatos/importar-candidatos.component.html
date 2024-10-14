@@ -1,8 +1,11 @@
-<p>importar-candidatos works!</p>
-<div>
-    <h2>Importar Candidatos</h2>
-    <textarea [(ngModel)]="candidatosJson" rows="10" cols="80"></textarea>
-    <br>
-    <button (click)="importar()">Importar</button>
-  </div>
-  
+<html lang="pt-BR">
+<body>
+    <div class="container">
+        <h2>Importar Candidatos</h2>
+        <textarea [(ngModel)]="candidatosJson" rows="10" placeholder="Cole os dados dos candidatos em formato JSON..."></textarea>
+        <button (click)="importar()">Importar</button>
+        <div class="footer">
+        </div>
+    </div>
+</body>
+</html>
