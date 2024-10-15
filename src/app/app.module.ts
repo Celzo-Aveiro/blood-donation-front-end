@@ -10,6 +10,10 @@ import { ImcMedioComponent } from './components/imc-medio/imc-medio.component';
 import { PercentualObesosComponent } from './components/percentual-obesos/percentual-obesos.component';
 import { MediaIdadeComponent } from './components/media-idade/media-idade.component';
 import { DoadoresTipoSanguineoComponent } from './components/doadores-tipo-sanguineo/doadores-tipo-sanguineo.component';
+import { LoginComponent } from './components/login/login.component'; // Ajuste conforme necessário
+import { AuthGuard } from './auth.guard';
+import { AuthService } from './services/auth.service';
+
 
 @NgModule({
   declarations: [
@@ -19,7 +23,8 @@ import { DoadoresTipoSanguineoComponent } from './components/doadores-tipo-sangu
     ImcMedioComponent,
     PercentualObesosComponent,
     MediaIdadeComponent,
-    DoadoresTipoSanguineoComponent
+    DoadoresTipoSanguineoComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -27,7 +32,7 @@ import { DoadoresTipoSanguineoComponent } from './components/doadores-tipo-sangu
     HttpClientModule,
     FormsModule
   ],
-  providers: [],
+  providers: [AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
